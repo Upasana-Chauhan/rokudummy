@@ -5,7 +5,7 @@ Function InitGATracker(AccountID As String, HostName As String) As Object
     m.GATracker.Version     = "1" 'The version of ga.js (utmwv)
     If Len(HostName) > 0 Then
         m.GATracker.HostName = HostName 'Domain (utmhn)
-    Els
+    Else
         m.GATracker.HostName = "Roku" 'Domain (utmhn)
     End If
     m.GATracker.Language    = "en-us" 'Language of browser (utmul)
