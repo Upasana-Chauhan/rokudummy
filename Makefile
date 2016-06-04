@@ -45,7 +45,7 @@
 ##########################################################################  
 APPNAME = rokudummy
 PKGREL = ../packages
-ZIPREL = ../zips
+ZIPREL = rokudummy/zips
 SOURCEREL = ..
 USERPASS =  rokudev:Aa123456
 ZIP_EXCLUDE = \*.swp \*~ \*\.~ LICENSE .gitignore Makefile README.md \*.git/\* \*.odp
