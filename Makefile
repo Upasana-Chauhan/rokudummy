@@ -1,4 +1,4 @@
-#
+﻿#
 # Copyright (c) 2012 - Maxwell Dayvson <dayvson@gmail.com>
 # Copyright (c) 2012 - Marco Lovato <marco.lovato@gmail.com>
 # All rights reserved.
@@ -45,7 +45,7 @@
 ##########################################################################  
 APPNAME = rokudummy
 PKGREL = ../packages
-ZIPREL = /zips
+ZIPREL = zips
 SOURCEREL = ..
 USERPASS =  rokudev:Aa123456
 ZIP_EXCLUDE = \*.swp \*~ \*\.~ LICENSE .gitignore Makefile README.md \*.git/\* \*.odp
