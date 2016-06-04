@@ -1,4 +1,4 @@
-﻿#
+#
 # Copyright (c) 2012 - Maxwell Dayvson <dayvson@gmail.com>
 # Copyright (c) 2012 - Marco Lovato <marco.lovato@gmail.com>
 # All rights reserved.
@@ -77,7 +77,7 @@ $(APPNAME):
 	@echo "  >> creating application zip $(SOURCEREL)"	
 	(zip -0 -r "$(ZIPREL)/$(APPNAME).zip" . -i \*.png -x $(ZIP_EXCLUDE)); \
 	(zip -9 -r "$(ZIPREL)/$(APPNAME).zip" . -x \*.png $(ZIP_EXCLUDE)); \
-	@echo "*** developer zip  $(APPNAME) complete ***"
+	echo "*** developer zip  $(APPNAME) complete ***"
 
 install: $(APPNAME)
 	@echo "Installing $(APPNAME) to host $(ROKU_DEV_TARGET)"
