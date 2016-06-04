@@ -74,7 +74,7 @@ $(APPNAME):
 	fi
 
 # zip .png files without compression
-	@echo "  >> creating application zip $(SOURCEREL)/$(APPNAME).zip"	
+	@echo "  >> creating application zip $(SOURCEREL)"	
 	@if [ -d $(SOURCEREL)/$(APPNAME) ]; \
 	then \
 		(zip -0 -r "$(ZIPREL)/$(APPNAME).zip" . -i \*.png -x $(ZIP_EXCLUDE)); \
