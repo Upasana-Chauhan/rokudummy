@@ -45,7 +45,7 @@
 ##########################################################################  
 APPNAME = rokudummy
 PKGREL = ../packages
-ZIPREL = rokudummy/zips
+ZIPREL = /zips
 SOURCEREL = ..
 USERPASS =  rokudev:Aa123456
 ZIP_EXCLUDE = \*.swp \*~ \*\.~ LICENSE .gitignore Makefile README.md \*.git/\* \*.odp
@@ -75,14 +75,8 @@ $(APPNAME):
 
 # zip .png files without compression
 	@echo "  >> creating application zip $(SOURCEREL)"	
-	@if [ -d $(SOURCEREL)/$(APPNAME) ]; \
-	then \
-		(zip -0 -r "$(ZIPREL)/$(APPNAME).zip" . -i \*.png -x $(ZIP_EXCLUDE)); \
-		(zip -9 -r "$(ZIPREL)/$(APPNAME).zip" . -x \*.png $(ZIP_EXCLUDE)); \
-	else \
-		echo "Source for $(APPNAME) not found at $(SOURCEREL)/$(APPNAME)"; \
-	fi
-
+	(zip -0 -r "$(ZIPREL)/$(APPNAME).zip" . -i \*.png -x $(ZIP_EXCLUDE)); \
+	(zip -9 -r "$(ZIPREL)/$(APPNAME).zip" . -x \*.png $(ZIP_EXCLUDE)); \
 	@echo "*** developer zip  $(APPNAME) complete ***"
 
 install: $(APPNAME)
