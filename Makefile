@@ -1,4 +1,4 @@
-#
+﻿#
 # Copyright (c) 2012 - Maxwell Dayvson <dayvson@gmail.com>
 # Copyright (c) 2012 - Marco Lovato <marco.lovato@gmail.com>
 # All rights reserved.
@@ -52,6 +52,8 @@ ZIP_EXCLUDE = \*.swp \*~ \*\.~ LICENSE .gitignore Makefile README.md \*.git/\* \
 ROKU_DEV_TARGET = 10.1.0.197
 .PHONY: all $(APPNAME)
 
+
+
 $(APPNAME): 
 	@echo "*** Creating $(APPNAME).zip ***"
 
@@ -74,8 +76,8 @@ $(APPNAME):
 	fi
 
 # zip .png files without compression
-	@echo "  >> creating application zip $(ZIPREL)/$(APPNAME).zip"	
-	@if [ -d $(SOURCEREL)/$(APPNAME) ]; \
+	@echo "  >> creating application zip $(SOURCEREL)/$(APPNAME).zip"	
+	@if [ -d $(SOURCEREL)/$(APPNAME) ]; \ 
 	then \
 		(zip -0 -r "$(ZIPREL)/$(APPNAME).zip" . -i \*.png -x $(ZIP_EXCLUDE)); \
 		(zip -9 -r "$(ZIPREL)/$(APPNAME).zip" . -x \*.png $(ZIP_EXCLUDE)); \
